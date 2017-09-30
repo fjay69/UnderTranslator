@@ -538,7 +538,7 @@ namespace UnderTranslator
                         StartInfo = new ProcessStartInfo
                         {
                             FileName = "WinExtract.exe",
-                            Arguments = up + " " + dest + "",
+                            Arguments = "\"" + up + "\" \"" + dest + "\"",
                             UseShellExecute = false,
                             RedirectStandardOutput = true,
                             CreateNoWindow = true
