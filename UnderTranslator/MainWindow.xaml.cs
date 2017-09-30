@@ -819,10 +819,10 @@ namespace UnderTranslator
 
         public static string PrjPath = "";
 
-        public static string PapFont = "9.font.gmx",
-            SansFont = "8.gmx",
-            MainFont = "main2.gmx",
-            PlainText = "4.font.gmx",
+        public static string PapFont = "fnt_papyrus.font.gmx",
+            SansFont = "fnt_comicsans.font.gmx",
+            MainFont = "fnt_maintext.font.gmx",
+            PlainText = "fnt_plain.font.gmx",
             FontFolder = "FONT",
             NewFontFolder = "FONT_new";
 
@@ -869,9 +869,9 @@ namespace UnderTranslator
         }
         public static bool LoadSTR(string path)
         {
-            if (!(File.Exists(System.IO.Path.Combine(path, "STRG.txt"))))
+            if (!(File.Exists(System.IO.Path.Combine(path, "original.txt"))))
                 return false;
-            origSTR = File.ReadAllLines(System.IO.Path.Combine(path, "STRG.txt"));
+            origSTR = File.ReadAllLines(System.IO.Path.Combine(path, "original.txt"));
 
             if (File.Exists(System.IO.Path.Combine(path, "translate.txt")))
             {
